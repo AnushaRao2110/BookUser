@@ -1,0 +1,112 @@
+<div class="container" style="margin-top: 120px;">
+
+  <div class="row" *ngIf="!selected">
+    <div class="col-md-3 col-sm-12 " *ngFor="let Book of bookService.books">
+      <div class="card text-center " style="width: 80%;height:80%;">
+
+        <img src={{Book.bpic}} height="55%" class="card-img-top">
+
+        <div class="card-body">
+          <h5>{{Book.bname}}</h5>
+          <p class="card-text text-center" style="font-family: 'Montserrat', sans-serif; font-size: 14px;"><b> Author :</b>
+            {{Book.aname }}<br>
+            <b>Genre :</b> {{Book.bdesc}}<br>
+            <b> Price :</b> {{Book.bprice|currency:'INR' }}<br>
+
+
+            <div class="row">
+              <div class="col sm-12 col-md-4"></div>
+              <button (click)="Buy(Book)" class="col-sm-12 col-md-4 p-1 btn btn-danger mb-4">Buy</button>
+             
+            </div>
+        </div>
+
+
+
+      </div>
+
+    </div>
+  </div>
+
+
+  <div class="form col-sm-12 col-md-6 text-center" *ngIf="selected">
+
+    <h3 style="font-family: 'Montserrat', sans-serif; color:black">ORDER CONFIRMATION</h3>
+
+    <form #OrderForm=ngForm (ngSubmit)="OrderForm.valid && OnSubmit(OrderForm)">
+
+
+      <div class="form-group"> 
+        <b><i>Book Name : {{bookService.selectedBook.bname}}</i></b>
+        <input type="hidden" #bname="ngModel" name="bname" [(ngModel)]="bookService.selectedBook.bname" readonly>
+      </div>
+      <div class="form-group">
+        <b><i>Price : {{bookService.selectedBook.bprice}}</i></b>
+        <input type="hidden" #bprice="ngModel" name="bprice" [(ngModel)]="bookService.selectedBook.bprice" readonly>
+
+      </div>
+     
+        <b><i>Quantity:</i></b>
+        <i class="icon fa fa-plus-square ml-2 mr-1"  (click)=increaseQuan()></i>{{bookService.currentOrder.quan}}
+        <i class="icon fa fa-minus-square " (click)=decreaseQuan()></i>
+        <br><br>
+        
+
+      <div class="form-group">
+        <label style="letter-spacing: 1px">Name</label>
+        <input type="text" #cname="ngModel" class="form-control" name="cname" required
+          [(ngModel)]="userService.userDetails.name"
+        [ngClass]="{'invalid-textbox': OrderForm.submitted && !cname.valid}">
+
+        <div *ngIf="OrderForm.submitted && cname.errors">
+          <label *ngIf="cname.errors.required" class="validation-message">This field is required.</label>
+        </div>
+
+      </div>
+      <div class="form-group">
+        <p>Email</p>
+        <input type="text" #cemail="ngModel" class="form-control" name="cemail"
+          [(ngModel)]="userService.userDetails.email" readonly>
+
+      </div>
+      <div class="form-group">
+        <p>Contact No. </p> 
+        <input type="number" #cphone="ngModel" class="form-control" name="cphone" required minlength="10"
+          [(ngModel)]="userService.userDetails.mobile"
+        [ngClass]="{'invalid-textbox': OrderForm.submitted && !cphone.valid}">
+
+        <div *ngIf="OrderForm.submitted && cphone.errors">
+          <label *ngIf="cphone.errors.required" class="validation-message">This field is required.</label>
+          <label *ngIf="cphone.errors.minlength" class="validation-message">Enter a 10 digit phone no</label>
+        </div>
+
+      </div>
+      <div class="form-group">
+        <p>Shipping Address </p>
+        <input type="text" #caddress="ngModel" class="form-control" name="caddress" required 
+          [(ngModel)]="bookService.currentOrder.caddress"
+        [ngClass]="{'invalid-textbox': OrderForm.submitted && !caddress.valid}">
+
+        <div *ngIf="OrderForm.submitted && caddress.errors">
+          <label *ngIf="caddress.errors.required" class="validation-message">This field is required.</label>
+        </div>
+      </div>
+      <div class="form-group">
+        <input type="hidden" #date="ngModel" readonly name="date" [(ngModel)]="bookService.currentOrder.date">
+      </div>
+
+      <!-- <div class="row">
+      <div class="col-md-4 col-lg-4"> -->
+      <button class="btn btn-success" type="submit">Confirm</button>
+      <!-- </div>
+    </div> -->
+
+    </form>
+    <div *ngIf="ErrorMessage">
+      <p>
+        {{ErrorMessage}}
+
+      </p>
+    </div>
+
+  </div>

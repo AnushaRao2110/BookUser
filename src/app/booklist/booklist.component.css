@@ -1,0 +1,18 @@
+input[type=text].invalid-textbox,input[type=number].invalid-textbox{
+    border-bottom: 1px solid #ed5558;
+    }
+    
+    label.validation-message{
+      color:#ed5558;
+    }
+
+    input[type=text],input[type=number]{
+ 
+        font-size: 16px;
+       
+        border: 1px solid black;
+       
+      }
+      .icon{
+        color:#d9534f ;
+      }

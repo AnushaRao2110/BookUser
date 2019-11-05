@@ -1,0 +1,42 @@
+<div class="row" style="width:100%;margin:0;padding:0;overflow: hidden">
+  <div id="login" class="col-sm-12">
+    <div class="row">
+      <div class="col-md-4 col-sm-12"></div>
+      <div class="col-md-4 col-sm-12 bg-white rounded shadow" style="padding:5%;margin-top:60px;">
+        <h3>Sign in</h3>
+        <hr>
+
+        <form #loginForm='ngForm' (ngSubmit)="OnSubmit(loginForm)">
+          <div class="form-group">
+            <!-- <label style="letter-spacing: 2px; margin-bottom: 10px">Email:</label> -->
+            <input type="email" class="form-control" name="email" #email='ngModel'
+              [(ngModel)]="userService.loginUser.email" placeholder="Enter Your Email Id ">
+          </div>
+          <div class="form-group">
+            <!-- <label style="letter-spacing: 2px; margin-bottom: 10px">Password:</label> -->
+            <input type="password" class="form-control" name="password" #password='ngModel'
+              [(ngModel)]="userService.loginUser.password" placeholder="Enter Your password"></div>
+
+
+
+          <div class="row ">
+
+            <div class="col-md-4 col-sm-12"></div>
+            <button class="btn btn-danger col-md-4 col-sm-12">Login</button>
+
+
+          </div>
+          <br>
+          <p style="font-size: 12px;color:black">Don't have an account?<a style="color:black"
+              (click)="nav()"><U><b>Register here.</b></U></a></p>
+          <router-outlet></router-outlet>
+
+          <div class="alert" *ngIf="ServerErrorMessage">
+            {{ServerErrorMessage}}
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

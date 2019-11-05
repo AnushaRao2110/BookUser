@@ -1,0 +1,231 @@
+section {
+  float: left;
+  width: 100%;
+}
+
+.image-sec {
+  overflow: hidden;
+  background-size: cover !important;
+  height: 500px;
+  -webkit-background-size: auto 100%;
+  -moz-background-size: auto 100%;
+  -o-background-size: auto 100%;
+  background: linear-gradient(rgba(2, 2, 2, 0.034), rgba(12, 12, 12, 0)), url('/assets/images/slide1.jpg') center;
+}
+
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+  width: 100%;
+}
+
+recomended-sec {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.recomended-sec h2 {
+  /* display: inline-block; */
+  font-size: 35px;
+  text-align: center;
+  /* padding: 0 15px; */
+  /* background: #fff; */
+  /* padding: 0 15px; */
+  /* position: relative; */
+  text-transform: uppercase;
+  color: #363636;
+}
+
+.recomended-sec hr {
+  margin: 10px 90px;
+  width: 85%;
+  border-top: 2px solid #999999;
+}
+
+.recomended-sec .title {
+  margin-top: 60px;
+}
+
+.recomended-sec .item {
+  border: 1px solid #d5d5d5;
+  padding: 36px 10px;
+  cursor: pointer;
+  position: relative;
+}
+
+.recomended-sec .item img {
+  margin-bottom: 15px;
+  max-width: 100%;
+}
+
+.recomended-sec .item h3 {
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 300;
+  margin-bottom: 10px;
+  height: 22px;
+  overflow: hidden;
+}
+
+.recomended-sec .item h6 {
+  font-size: 12px;
+}
+
+.recomended-sec .item h6 span {
+  color: #ff0000;
+}
+
+.recomended-sec .item h6 a {
+  color: #000;
+  border-bottom: 1px solid #d5d5d5;
+  padding-bottom: 1px;
+}
+
+.recomended-sec .item .sale {
+  background: #f9372c;
+  padding: 10px 24px;
+  top: 0;
+  left: 0;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.about-sec {
+  margin-top: 40px;
+  background: #64636338;
+  float: left;
+  width: 100%;
+  height: auto;
+}
+
+.about-sec .about-img figure {
+  height: 100%;
+  width: 100%;
+  background-position: center !important;
+}
+
+.about-sec .about-content {
+  padding: 80px 40px;
+}
+
+.about-sec .about-content h3 {
+  font-family: 'Roboto', sans-serif;
+  color: #612e2cc9;
+  text-transform: uppercase;
+  font-size: 42px;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.about-sec .about-content p {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 28px;
+  margin-bottom: 5px;
+}
+
+.features-sec {
+  text-align: center;
+  padding: 0 20px 0px;
+}
+
+.features-sec span.icon {
+  width: 55px;
+  height: 55px;
+  border: 2px solid #cbcbcb;
+  display: block;
+  border-radius: 50%;
+  margin: auto;
+  background: #fff;
+  font-size: 22px;
+  padding: 10px 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #ffaf00;
+}
+
+.features-sec span.icon.shop {
+  color: #ffaf00;
+}
+
+.features-sec span.icon.return {
+  color: #00aeef;
+}
+
+.features-sec span.icon.chat {
+  color: #00a99d;
+}
+
+.features-sec h3 {
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+
+.features-sec h6 {
+  font-size: 16px;
+  font-weight: 300;
+  color: #000;
+  line-height: 30px;
+  opacity: 0.7;
+  margin-bottom: 40px;
+}
+
+/* @media only screen and (max-width: 1024px) {
+  .container {
+    width: 100%;
+    padding: 0 20px;
+    max-width: 100%;
+  }
+  .about-sec .about-content {
+    max-width: 580px;
+    padding-left: 40px;
+  }
+} */
+
+/* @media only screen and (max-width: 800px) {
+  .recomended-sec h2 {
+    font-size: 26px;
+  }
+  .recomended-sec hr {
+    margin-top: -15px;
+  }
+  .recomended-sec .item {
+    margin-bottom: 30px;
+  }
+  .recomended-sec {
+    margin-bottom: 50px;
+  }
+  .recent-book-sec .row .col-lg-2 {
+    -ms-flex: 25%;
+    flex: 25%;
+    max-width: 25%;
+  }
+  .about-sec .about-content {
+    max-width: 440px;
+    padding: 40px 0 40px 25px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .container {
+    padding: 0 15px;
+  }
+  .recomended-sec .title {
+    margin-bottom: 40px;
+  }
+  .recomended-sec h2 {
+    font-size: 22px;
+  }
+  .features-sec ul li {
+    width: 100%;
+    margin-bottom: 60px;
+  }
+  .features-sec ul li:last-child {
+    margin-bottom: 0;
+  }
+  .features-sec ul li {
+    border: 1px solid #cacaca;
+  }
+} */

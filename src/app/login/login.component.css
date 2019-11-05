@@ -1,0 +1,47 @@
+
+   
+  
+  h3{
+    text-transform:uppercase; 
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    color: #b43807;
+    }
+  
+    hr{
+      width:100%; 
+      height: 0%;
+      border:0px;
+      border-top: 1.5px solid black;
+      opacity: 0.2;
+      margin-top: 0;
+    }
+
+
+
+  input[type=text]:placeholder {
+    color: #cccccc;
+  }
+  
+  input[type=text].invalid-textbox,input[type=password].invalid-textbox{
+  border-bottom: 2px solid #ed5558;
+  }
+  
+  label.validation-message{
+    color:#ed5558;
+  }
+  
+  input[type=email],input[type=password]{
+ 
+    font-size: 16px;
+   
+    border: 1px solid black;
+   
+  }
+  a:hover
+  {
+    cursor: pointer;
+  }
+  
+  
+  
