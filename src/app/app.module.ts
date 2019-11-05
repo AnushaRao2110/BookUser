@@ -18,7 +18,7 @@ import { AuthGuard } from './auth/auth.guard';
 import { AuthInterceptor } from './auth/auth.interceptor';
 import { OrdersComponent } from './orders/orders.component';
 import { BooklistComponent } from './booklist/booklist.component';
-import {CustomMinDirective} from './custom-min.directive';
+
 
 
 
@@ -41,8 +41,8 @@ const approutes: Routes = [
     LoginComponent,
     ContactComponent,
     OrdersComponent,
-    BooklistComponent,
-    CustomMinDirective
+    BooklistComponent
+   
   
   ],
   imports: [

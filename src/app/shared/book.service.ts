@@ -29,7 +29,7 @@ export class BookService {
     bprice:null,
     date: new Date().toDateString()
   };
-  readonly baseUrl = "http://localhost:3000";
+  readonly baseUrl = "http://bookmanserver.herokuapp.com";
 
   constructor(private http : HttpClient) { }
 
